@@ -1,6 +1,10 @@
-Binance Crypto Portfolio Simulator with Monte Carlo Simulation
+# 🚀 Binance Crypto Portfolio Simulator with Monte Carlo Simulation
 
-This project simulates potential future portfolio outcomes using Monte Carlo simulations on historical crypto price data from the Binance API. It follows a modular data engineering approach, including ingestion, transformation, and analysis pipelines, with data storage in AWS S3 (bronze/silver layers) and processing in Python.
+This project simulates potential future portfolio outcomes using **Monte Carlo simulations** on historical crypto price data from the **Binance API**. It follows a modular data engineering approach, including ingestion, transformation, and analysis pipelines, with data storage in **AWS S3 (bronze/silver layers)** and processing in Python.
+
+---
+
+## 📈 Project Architecture
 
 Binance API → Ingestion Script → Bronze Layer (raw OHLCV Parquet in S3)
                                ↓
@@ -10,7 +14,9 @@ Binance API → Ingestion Script → Bronze Layer (raw OHLCV Parquet in S3)
                                ↓
                      Visualization (Matplotlib / Streamlit)
 
-Tech Stack
+---
+
+## 🧰 Tech Stack
 
 | Layer              | Tools Used                                            |
 | ------------------ | ----------------------------------------------------- |
@@ -21,8 +27,9 @@ Tech Stack
 | **Visualization**  | Matplotlib / Streamlit                                |
 | **Infrastructure** | Local dev, scalable to Airflow/Spark (optional)       |
 
+---
 
-Project Features
+## 🔍 Project Features
 
 ✅ Pull historical OHLCV (candlestick) data for selected crypto symbols.
 
@@ -36,14 +43,25 @@ Project Features
 
 ✅ Visualize portfolio paths, histograms of outcomes, and Value-at-Risk (VaR).
 
+---
 
-Future Work
+## 🧪 Example Output
 
-Add Airflow DAG for scheduled ingestion & simulation
+- Monte Carlo Simulated Portfolio Paths
 
-Deploy visualization as a public Streamlit app
+- Distribution of End-of-Simulation Portfolio Values
 
-Extend to equities using Alpha Vantage or Yahoo Finance API
+- 95% VaR of the simulated portfolio
 
-Integrate backtesting framework (Backtrader)
+---
+
+## Future Work
+
+- Add Airflow DAG for scheduled ingestion & simulation
+
+- Deploy visualization as a public Streamlit app
+
+- Extend to equities using Alpha Vantage or Yahoo Finance API
+
+- Integrate backtesting framework (Backtrader)
 
